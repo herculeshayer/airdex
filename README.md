@@ -1,4 +1,4 @@
-# Air Quality Index Application using React 
+# AirDex - Air Quality Index Frontend Application 
 
 
 Hosted on AWS [Live](https://github.com/facebook/create-react-app).

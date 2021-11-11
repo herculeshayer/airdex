@@ -6,6 +6,8 @@ import DisplayCities from './displayCities';
 const GetAQIInformation = ({keyword}) => {
     const [ allCities, setallCities ] = useState([]);
 
+    const [ UID , setUID ] = useState(0);
+
     let URL = `https://api.waqi.info/search/?keyword=${keyword}&token=${process.env.REACT_APP_AQI_TOKEN}`;
 
     // console.log(URL);
@@ -21,28 +23,44 @@ const GetAQIInformation = ({keyword}) => {
 
     console.log(allCities);
 
+    console.log(UID);
+    // const handleEvent = e => {
+    //     e.preventDefault();
+    //     setUID()
+    // }
 
     return (
-
-
         <>
 
-            <DisplayCities cities={allCities}/>
-            {/* {allCities.map((city, key) => {
-                const { uid, aqi, station } = city;
-                return(<div key={key}>
-    
-                    <h1>{uid}</h1>
-                    <h1>{aqi}</h1>
-                    <h1>{station.name}</h1>
-    
-                </div>
-                );
-            })} */}
-        </> 
+        
+            {}
+            {
+                UID ? 
+                <DisplayCities JuanCity={UID}/> :
+                allCities.map((city, key) => {
+                    const { uid, aqi, station } = city;
+                    return(<li key={key}>
+                        <button onClick={(e)=>{
+                            e.preventDefault();
+                            setUID(uid);
+                        }}>
 
+                            <h1>{uid}</h1>
+                            <h1>{aqi}</h1>
+                            <h1>{station.name}</h1>
+                        </button>
+                    </li>
+                    );
+            })
+
+            }
+            
+        </>
     );
     // <DisplayCities cities={allCities}/>;
+
+    {/* <DisplayCities cities={allCities}/> */}
+            
 }
 
 

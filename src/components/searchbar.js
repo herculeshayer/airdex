@@ -6,6 +6,8 @@ import GetAQIInformation from './GetAQI';
 const SearchBar = () => {
     const [ keyword, setKeyword ] = useState([]);
 
+    
+
     const handleEvent = (e) => {
 
         // addEventListener('input', )
@@ -19,7 +21,9 @@ const SearchBar = () => {
     //     e.preventDefault();
     //     setKeyword(e.target.value);
     // })
-    
+    // const [ allCities ] = GetAQIInformation(keyword);
+
+    // console.log(allCities);
     
     return(
         <>

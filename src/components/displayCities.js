@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
+import DisplayGraph from './DisplayGraph';
+
 const DisplayCities = ({JuanCity}) => {
     const [ singleCity, setSingleCity ] = useState([]);
     const { aqi, city, time, iaqi } = singleCity;
@@ -49,6 +51,8 @@ const DisplayCities = ({JuanCity}) => {
                 {city.geo[0]}
                 {city.geo[1]}<br/>
                 {aqi}
+
+                <DisplayGraph graphData={singleCity}/>
 
             </div>
             

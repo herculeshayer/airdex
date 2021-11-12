@@ -33,7 +33,6 @@ const GetAQIInformation = ({keyword}) => {
         <>
 
         
-            {}
             {
                 UID ? 
                 <DisplayCities JuanCity={UID}/> :

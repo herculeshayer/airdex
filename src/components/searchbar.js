@@ -8,15 +8,15 @@ const SearchBar = () => {
 
     
 
-    const handleEvent = (e) => {
+    // const handleEvent = (e) => {
 
-        // addEventListener('input', )
-        e.preventDefault();
+    //     // addEventListener('input', )
+    //     e.preventDefault();
 
-        setKeyword(e.target.value);
+    //     setKeyword(e.target.value);
 
             
-    }
+    // }
     // addEventListener('input', (e) => {
     //     e.preventDefault();
     //     setKeyword(e.target.value);
@@ -28,6 +28,7 @@ const SearchBar = () => {
     return(
         <>
             <input type="text" placeholder="Enter City" onChange={e=>setKeyword(e.target.value)}/>
+            <button onClick={()=> window.location.reload()}>Refresh</button>
             {/* <button></button> */}
             <GetAQIInformation keyword={keyword} />
 

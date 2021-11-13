@@ -3,21 +3,16 @@
   src: url("../../assets/fonts/YujiSyuku-Regular.ttf") format("truetype");
 }
 
+h4, h6, div {
+  margin: 0;
+}
+
 html, body {
   font-family: "YujiSyuku-Regular", Fallback, sans-serif;
   margin: auto 0;
   padding: 0;
   text-align: center;
-}
-
-body {
   background-color: #ffaa00;
-}
-
-input {
-  width: 50%;
-  padding: 10px 3px 10px 3px;
-  margin-bottom: 30px;
 }
 
 #homepage {
@@ -36,18 +31,32 @@ input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
+@media only screen and (max-width: 600px) {
+  #homepage {
+    margin-top: 1rem;
+  }
+}
+
+.Graph {
+  background-color: whitesmoke;
+  border-radius: 3px;
+}
+
 .Individual-City {
-  background-color: #ebebeb;
   border-radius: 3%;
+}
+
+@media only screen and (max-width: 600px) {
+  .Individual-City {
+    font-size: 12px;
+    width: 100%;
+  }
 }
 
 .Search-Bar {
@@ -59,14 +68,37 @@ input {
   height: 40px;
   background-color: white;
   border-radius: 3px;
-  border-style: none;
-  padding: 10px;
+  border: 1px solid black;
   margin-left: 10px;
   font-size: 16px;
+  cursor: pointer;
+}
+
+.Search-Bar button:hover {
+  background-color: #00ffaa;
 }
 
 .Search-Bar input {
-  width: 35rem;
+  width: 32rem;
+  padding: 10px 3px 10px 3px;
+  margin-bottom: 2rem;
+  border: 1px solid black;
+}
+
+.Search-Bar input:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .Search-Bar input {
+    width: 20rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .Search-Bar input {
+    width: 15rem;
+  }
 }
 
 .All-Cities-Container li {
@@ -74,22 +106,19 @@ input {
 }
 
 .All-Cities-Container li button {
-  border-radius: 20px;
+  border-radius: 5px;
   width: 20rem;
-  height: 10rem;
+  height: 8rem;
   background-color: white;
   cursor: pointer;
   border-style: none;
   padding: 0;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 }
 
 .All-Cities-Container .Individual-City-Container {
   display: -ms-grid;
   display: grid;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
   -ms-grid-columns: 3fr 1fr;
       grid-template-columns: 3fr 1fr;
 }
@@ -98,10 +127,14 @@ input {
   font-size: 16px;
 }
 
+.All-Cities-Container .Individual-City-Container .Name-Geo-Item h6 {
+  margin-top: 2.5rem;
+}
+
 .All-Cities-Container .Individual-City-Container .AQI-Item {
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  height: 10rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 8rem;
 }
 
 .All-Cities-Container .Individual-City-Container .good {
@@ -130,5 +163,31 @@ input {
 
 .All-Cities-Container .Individual-City-Container .AQI-Unavail {
   background-color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  .All-Cities-Container li {
+    list-style-type: none;
+  }
+  .All-Cities-Container li button {
+    border-radius: 20px;
+    width: 20rem;
+    height: 6rem;
+    background-color: white;
+    padding: 0;
+    margin-bottom: 4px;
+  }
+  .All-Cities-Container .Individual-City-Container .Name-Geo-Item {
+    font-size: 14px;
+  }
+  .All-Cities-Container .Individual-City-Container .Name-Geo-Item h6 {
+    margin-top: 1.5rem;
+  }
+  .All-Cities-Container .Individual-City-Container .AQI-Item {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 6rem;
+    justify-items: center;
+  }
 }
 /*# sourceMappingURL=index.css.map */

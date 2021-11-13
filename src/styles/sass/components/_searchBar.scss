@@ -3,21 +3,53 @@
     // display: flex;
     // justify-content: center;
 
+    
+
     button {
         width: 60px;
         height: 40px;
         background-color: white;
         border-radius: 3px;
-        border-style: none;
-        padding: 10px;
+        // border-style: solid;
+        border: 1px solid black;
+        // padding: 10px 3px 10px 3px;
         margin-left: 10px;
         font-size: 16px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #00ffaa;
     }
     input {
-        width: 35rem;
+        width: 32rem;
+        // height: 40px;
+        padding: 10px 3px 10px 3px;
+        margin-bottom: 2rem;
+        border: 1px solid black;
+    }
+    input:focus {
+        outline: none;
     }
 
     width: 100%;
     // text-align: center;
     // float: left;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .Search-Bar {
+        
+        input {
+            width: 20rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .Search-Bar {
+        input {
+            width: 15rem; 
+        }
+    }
 }

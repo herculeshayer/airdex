@@ -1,25 +1,21 @@
-
 @font-face {
     font-family: "YujiSyuku-Regular";
     src: url("../../assets/fonts/YujiSyuku-Regular.ttf") format("truetype");
 }
 
+h4, h6, div {
+    margin: 0;
+    // display: inline-block;
+}
+
 html, body {
     font-family: "YujiSyuku-Regular", Fallback, sans-serif;
     margin: auto 0;
-    // text-align: center;
     padding: 0;
-    
     text-align: center;
-    // height: 100%;
-    
-}
-
-body {
-    
-    
     background-color: rgb(255, 170, 0);
 }
+
 
 
 @import './pages/home';

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import GetAQIInformation from './GetAQI';
+import RenderAllCities from './renderAllCities';
 
 import { GrRefresh } from 'react-icons/gr';
 
@@ -77,8 +77,8 @@ const SearchBar = () => {
 
             {
                 keyword ?
-                <GetAQIInformation keyword={keyword} /> :
-                <h1>Go ahead, try it</h1>
+                <RenderAllCities keyword={keyword} /> :
+                <h2>Go ahead, don't be shy</h2>
             }
         </>
     );

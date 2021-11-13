@@ -1,60 +1,41 @@
 import React, { useState, useEffect } from 'react';
-import { createPortal } from 'react-dom';
-import DisplayCities from './displayCities';
+
+import RenderSingleCity from './renderSingleCity';
 
 
 
-const GetAQIInformation = ({keyword}) => {
+const RenderAllCities = ({keyword}) => {
     const [ allCities, setallCities ] = useState([]);
 
     const [ UID , setUID ] = useState(0);
 
-    const [ color, setColor ] = useState('black');
+   
 
     let URL = `https://api.waqi.info/search/?keyword=${keyword}&token=${process.env.REACT_APP_AQI_TOKEN}`;
 
-    // console.log(URL);
+    
     useEffect(()=> {
         fetch(URL)
             .then(res => res.json())
             .then(cityData => {
                 setallCities(cityData.data);
-                // console.log(cityData.data.city.name);
+                
             })
             .catch(err => console.log(err))
     }, [URL])
 
-    console.log(allCities);
 
-    console.log(UID);
-    // const handleEvent = e => {
-    //     e.preventDefault();
-    //     setUID()
-    // }
+  
 
     /**
      * 
      * @param {Integer} value 
      * @returns String
      * 
-     * .good {
-            background-color: #096;
-        }
-        .moderate {
-            background-color: #ffde33;
-        }
-        .unhealthy-sensitive {
-            background-color: #ff9933;
-        }
-        .unhealthy {
-            background-color: #c03;
-        }
-        .very-unhealthy {
-            background-color: #609;
-        }
-        .hazardous {
-            background-color: #7e0023;
-        }
+     * Function will change the className of the container to
+     * the appropriate CSS class. 
+     * I.e. everything under 50 AQI will be green
+     * Everything over 301 will be dark red
      */
     const changeColor = (value) => {
 
@@ -80,14 +61,12 @@ const GetAQIInformation = ({keyword}) => {
             {
                 UID ? 
 
-                <DisplayCities JuanCity={UID}/> :
+                <RenderSingleCity JuanCity={UID}/> :
 
                 allCities.map((city, key) => {
                     const { uid, aqi, station } = city;
 
-                    // if(aqi > 0 && aqi < 51) {
-                    //     setColor('green')
-                    // } 
+                    
                     return(
                     
                     <li key={key}>
@@ -97,8 +76,8 @@ const GetAQIInformation = ({keyword}) => {
                         }}>
                             <div className="Name-Geo-Item">
                                 <h4>{station.name}</h4>
-                                <h6>Longitude: {station.geo[0]}</h6>
-                                <h6>Latitude: {station.geo[1]}</h6>
+                                <h6>Longitude: {station.geo[0]}<br />
+                                Latitude: {station.geo[1]}</h6>
                             </div>
                             
                             
@@ -125,4 +104,4 @@ const GetAQIInformation = ({keyword}) => {
 
 
 
-export default GetAQIInformation;
+export default RenderAllCities;

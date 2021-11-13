@@ -1,25 +1,23 @@
 import React, { useEffect, useState } from "react";
 
-import { Line } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
+import { Route, Routes } from "react-router-dom";
+
+import Page404 from "../pages/404";
 
 const DisplayGraph = ({graphData}) => {
     
-    const [ graph, setGraph ] = useState({});
-
-    const [ dates, setDates ] = useState([]);
+ 
 
     let datesARR = [], 
         o3ARR = [],
         pm10ARR = [],
         pm25ARR = [];
-    // let o3ARR = [];
-
-    // console.log(graphData.forecast)
-    // console.log('pm10',graphData.forecast.daily.pm10[2].avg)
+    
 
     try {
         if(graphData.forecast) {
-            //graphData.forecast.daily.o3.length
+            
                     for(let i = 0; i < 4; i++) {
                     
                         datesARR.push(graphData.forecast.daily.o3[i].day)
@@ -30,68 +28,57 @@ const DisplayGraph = ({graphData}) => {
                     }
                 }
     } catch (error) {
-        return console.log(error);
-    }
-
-    
-
-    
         
-    const addValues = () => {
-        if(graphData.forecast.daily) {
-       
+        console.log(error)
+        return (
+            <>
             
-            // for(let i = 0; i < graphData.forecast.daily.pm10[i].length; i++) {
-            
-            //     pm10ARR.push(graphData.forecast.daily.pm10[i].avg)
-                
-            // }
-            // for(let i = 0; i < graphData.forecast.daily.pm25[i].length; i++) {
-                
-            //     pm25ARR.push(graphData.forecast.daily.pm25[i].avg)
-            // }
-    
-        }
+                <Routes>
+
+                    <Route path="https://google.ca" element={<Page404 />}>
+                        
+                        Here
+                    </Route>
+
+                </Routes>
+            </>
+        );
     }
 
-    // useEffect(() => {
-    //     addValues();
-    // }, [])
-    
-    
+ 
 
     console.log('dates', datesARR);
     console.log('o3', o3ARR);
     console.log('pm10', pm10ARR);
     console.log('pm25', pm25ARR);
 
-    // const o3Data;
-    // const labels = datesARR;
+    
     const lineData = {
         labels: datesARR,
         datasets: [{
             label: 'O\u2083',
             data: o3ARR,
             fill: false,
-            borderColor: 'white',
+            backgroundColor: 'green',
             tension: 0.1
         }, {
           label: 'PM\u2081\u2080',
           data: pm10ARR,
           fill: false,
-          borderColor: 'blue',
+          backgroundColor: 'blue',
           tension: 0.1
         }, {
             label: 'PM\u2082\u2085',
           data: pm25ARR,
           fill: false,
-          borderColor: 'red',
+          backgroundColor: 'red',
           tension: 0.1
         }]
       };
 
     const options = {
         responsive: true,
+        // maintainAspectRatio: false,
         tooltips: {
             enabled: true,
             mode: 'index'
@@ -109,30 +96,25 @@ const DisplayGraph = ({graphData}) => {
                     }
                 }
             }
+        },
+        scales: {
+            yAxes: [
+                {
+                    ticks: {
+                        beginAtZero: true
+                    },
+                    gridLines: {
+                        display: false,
+                    }
+                }
+            ]
         }
     }
 
-    // const chart = () => {
-    //     setGraph({
-    //         labels: ['m','t','w','r','f'],
-    //         datasets: [{
-    //                 label: 'o3',
-    //                 data: [1,2,3,4,5],
-    //                 backgroundColor: 'rgba(1,1,1,1)',
-    //                 borderWidth: 4
-    //             }],   
-    //     })
-    // }
-
-
-    // useEffect(()=> {
-    //     chart();
-    // }, []);
-
-    // console.log(graphData.forecast.daily.o3[0].day)
+   
     return(
-        <div>
-            <Line data={lineData} options={options}/>
+        <div className="Graph">
+            <Bar data={lineData} options={options}/>
         </div>
     )
 }

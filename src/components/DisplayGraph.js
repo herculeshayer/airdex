@@ -77,7 +77,7 @@ const DisplayGraph = ({graphData}) => {
       };
 
     const options = {
-        responsive: true,
+        // responsive: true,
         // maintainAspectRatio: false,
         tooltips: {
             enabled: true,

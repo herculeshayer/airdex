@@ -1,20 +1,134 @@
-body {
-  background-color: #ffaa00;
+@font-face {
+  font-family: "YujiSyuku-Regular";
+  src: url("../../assets/fonts/YujiSyuku-Regular.ttf") format("truetype");
+}
+
+html, body {
+  font-family: "YujiSyuku-Regular", Fallback, sans-serif;
+  margin: auto 0;
+  padding: 0;
   text-align: center;
 }
 
-body input {
-  width: 50%;
-  padding: 10px 3px 10px 3px;
+body {
+  background-color: #ffaa00;
 }
 
-body button {
+input {
   width: 50%;
-  background-color: white;
+  padding: 10px 3px 10px 3px;
+  margin-bottom: 30px;
+}
+
+#homepage {
+  margin-top: 10rem;
+  margin-bottom: 30px;
+}
+
+#homepage h1 {
+  font-size: 50px;
+}
+
+#flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .Individual-City {
-  background-color: cadetblue;
-  text-align: center;
+  background-color: #ebebeb;
+  border-radius: 3%;
+}
+
+.Search-Bar {
+  width: 100%;
+}
+
+.Search-Bar button {
+  width: 60px;
+  height: 40px;
+  background-color: white;
+  border-radius: 3px;
+  border-style: none;
+  padding: 10px;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.Search-Bar input {
+  width: 35rem;
+}
+
+.All-Cities-Container li {
+  list-style-type: none;
+}
+
+.All-Cities-Container li button {
+  border-radius: 20px;
+  width: 20rem;
+  height: 10rem;
+  background-color: white;
+  cursor: pointer;
+  border-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.All-Cities-Container .Individual-City-Container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+}
+
+.All-Cities-Container .Individual-City-Container .Name-Geo-Item {
+  font-size: 16px;
+}
+
+.All-Cities-Container .Individual-City-Container .AQI-Item {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 10rem;
+}
+
+.All-Cities-Container .Individual-City-Container .good {
+  background-color: #096;
+}
+
+.All-Cities-Container .Individual-City-Container .moderate {
+  background-color: #ffde33;
+}
+
+.All-Cities-Container .Individual-City-Container .unhealthy-sensitive {
+  background-color: #ff9933;
+}
+
+.All-Cities-Container .Individual-City-Container .unhealthy {
+  background-color: #c03;
+}
+
+.All-Cities-Container .Individual-City-Container .very-unhealthy {
+  background-color: #609;
+}
+
+.All-Cities-Container .Individual-City-Container .hazardous {
+  background-color: #7e0023;
+}
+
+.All-Cities-Container .Individual-City-Container .AQI-Unavail {
+  background-color: black;
 }
 /*# sourceMappingURL=index.css.map */

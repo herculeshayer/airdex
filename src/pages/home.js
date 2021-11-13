@@ -1,8 +1,8 @@
 import React from "react";
 
-// import GetAQIInformation from "../components/GetAQI";
+
 import SearchBar from "../components/searchbar";
-// id="homepage"
+
 const HomePage = () => {
     return (
         <div id="flex-container">

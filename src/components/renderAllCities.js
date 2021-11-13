@@ -96,9 +96,7 @@ const RenderAllCities = ({keyword}) => {
             
         </div>
     );
-    // <DisplayCities cities={allCities}/>;
-
-    {/* <DisplayCities cities={allCities}/> */}
+    
             
 }
 

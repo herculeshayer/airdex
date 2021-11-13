@@ -1,3 +1,8 @@
+/**
+ * This component does not work as intended
+ * Needs further development
+ */
+
 import React from "react";
 
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";

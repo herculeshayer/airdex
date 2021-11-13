@@ -6,39 +6,20 @@ import { GrRefresh } from 'react-icons/gr';
 const SearchBar = () => {
     const [ keyword, setKeyword ] = useState('');
 
-    const [ selectCity, setSelectCity ] = useState(true);
-    
 
-    // const handleEvent = (e) => {
-
-    //     // addEventListener('input', )
-    //     e.preventDefault();
-
-    //     setKeyword(e.target.value);
-
-            
-    // }
-    // addEventListener('input', (e) => {
-    //     e.preventDefault();
-    //     setKeyword(e.target.value);
-    // })
-    // const [ allCities ] = GetAQIInformation(keyword);
-
-    // console.log(allCities);
-
-    // if(!keyword) {
-    //     return <><h1>Enter the name of a city</h1></>
-    // } 
-    
+    /**
+     * 
+     * @param {error} e
+     * 
+     * Reset keyword on press 
+     */
     function handleRefresh(e){
         e.preventDefault();
         
         setKeyword('');
         console.log(keyword, 'pressed');
     }
-    // useEffect(()=> {
-    //     setKeyword(0);
-    // }, [handleRefresh])
+    
     /**
      * Instead of it updating as I type, I could set a button that submits when clicked.
      * I like the way it is right now, but then I have the hassle of removing keywords
@@ -62,18 +43,6 @@ const SearchBar = () => {
 
                 
             </div>
-
-            {/* {
-                keyword ?
-                <h1>Enter data</h1> :
-                <h1>Thanks</h1>
-            } */}
-            {/* <button></button> */}
-            
-            {/* {
-                selectCity ?
-                <h1>Gimme</h1> :
-            } */}
 
             {
                 keyword ?

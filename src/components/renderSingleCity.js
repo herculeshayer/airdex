@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import DisplayGraph from './displayGraph';
+import DisplayGraph from './DisplayGraph';
 
 const RenderSingleCity = ({JuanCity}) => {
     const [ singleCity, setSingleCity ] = useState([]);

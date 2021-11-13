@@ -3,9 +3,9 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f44a8f25-755a-4f57-b720-f6bbc3f1da11/deploy-status)](https://app.netlify.com/sites/airdex/deploys)
 
 
-Hosted on AWS [AWS](https://main.dpsrlf9zur0gc.amplifyapp.com/).
+Hosted on [AWS](https://main.dpsrlf9zur0gc.amplifyapp.com/).
 
-Hosted on Netlify [Netlify](https://airdex.netlify.app/).
+Hosted on [Netlify](https://airdex.netlify.app/).
 
 
 ## Description
@@ -18,9 +18,9 @@ Users will be able to search from 1000+ cities and recieve accurate information 
 For more information on React visit the [React Website](https://reactjs.org/).
 
 ### Technology Used
-HTML, CSS, SASS, JavaScript, React.js, Chart.js
+Frontend: HTML, CSS, SASS, JavaScript, React.js, Chart.js
 
-AWS, Netlify, GitHub, GitHub Actions
+Misc: AWS, Netlify, GitHub
 
 ## Demo
 
@@ -32,7 +32,13 @@ https://user-images.githubusercontent.com/64183136/141608783-37dc664f-e344-4d04-
 
 ## Installation 
 
-Download [node.js](https://nodejs.org/en/).
+1. Download [node.js](https://nodejs.org/en/).
+2. A token is required from [AQI API](https://aqicn.org/data-platform/token/#/).
+4. git clone this repository to your desktop 
+5. Open the folder in your favorite text-editor
+6. Create a .env file and add a variable REACT_APP_TOKEN=yourTokenHere
+7. Access your terminal -> enter the repository folder -> type: 'npm install && npm start'
+8. You're done! 
 
 ## TODO - Issues
 1. On occasion the city will not have the information needed for display. Specifically, this causes the 

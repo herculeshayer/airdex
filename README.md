@@ -1,9 +1,10 @@
 # AirDex - Air Quality Index Frontend Application 
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f44a8f25-755a-4f57-b720-f6bbc3f1da11/deploy-status)](https://app.netlify.com/sites/trusting-lewin-1bef05/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f44a8f25-755a-4f57-b720-f6bbc3f1da11/deploy-status)](https://app.netlify.com/sites/airdex/deploys)
 
 
 Hosted on AWS [AWS](https://main.dpsrlf9zur0gc.amplifyapp.com/).
+
 Hosted on Netlify [Netlify](https://airdex.netlify.app/).
 
 
@@ -29,8 +30,16 @@ AWS, Netlify, GitHub, GitHub Actions
 
 Download [node.js](https://nodejs.org/en/).
 
-## Screenshots 
+## TODO - Issues
+1. On occasion the city will not have the information needed for display. Specifically, this causes the 
+application to crash due to undefined data.
+2. The Chart.js bar graph is not entirely responsive. Further inspection needed
+3. Added react-router to navigate to a 404 page, however it's recently been updated to v6 and 
+it would additional time to navigate a solution
 
-
+## TODO - Addons
+1. Test API using Jest. Integration testing for reliable API calls
+2. CI/CD GitHub Actions testing
+3. Animations for RenderAllCities.js. Cascading dropdown.
 
 

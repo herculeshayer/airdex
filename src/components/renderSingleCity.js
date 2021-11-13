@@ -33,11 +33,11 @@ const RenderSingleCity = ({JuanCity}) => {
                 
                 <h1>{city.name}</h1>
                
-                <h6>
+                <h4>
                     Longitude: {city.geo[0] === null ? 'Null' : city.geo[0]}<br/>
                     Latitude: {city.geo[1] === null ? 'Null' : city.geo[1]}<br/>
-                </h6>
-                <h3>Air Quality Index: {aqi}</h3>
+                </h4>
+                <h3>Current AQI: {aqi}</h3>
 
                 <DisplayGraph graphData={singleCity}/>
 

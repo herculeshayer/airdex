@@ -25,6 +25,10 @@ AWS, Netlify, GitHub, GitHub Actions
 ## Demo
 
 
+https://user-images.githubusercontent.com/64183136/141608783-37dc664f-e344-4d04-8137-a38d909836be.mp4
+
+
+
 
 ## Installation 
 

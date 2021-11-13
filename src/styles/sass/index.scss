@@ -1,7 +1,32 @@
+
+@font-face {
+    font-family: "YujiSyuku-Regular";
+    src: url("../../assets/fonts/YujiSyuku-Regular.ttf") format("truetype");
+}
+
+html, body {
+    font-family: "YujiSyuku-Regular", Fallback, sans-serif;
+    margin: auto 0;
+    // text-align: center;
+    padding: 0;
+    
+    text-align: center;
+    // height: 100%;
+    
+}
+
+body {
+    
+    
+    background-color: rgb(255, 170, 0);
+}
+
+
 @import './pages/home';
 
 
 
 @import './components/graph';
 @import './components/singleCity';
-
+@import './components/searchBar';
+@import './components/allCities';

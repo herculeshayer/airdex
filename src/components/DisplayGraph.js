@@ -14,20 +14,26 @@ const DisplayGraph = ({graphData}) => {
         pm25ARR = [];
     // let o3ARR = [];
 
-    console.log(graphData.forecast)
-    console.log('pm10',graphData.forecast.daily.pm10[2].avg)
+    // console.log(graphData.forecast)
+    // console.log('pm10',graphData.forecast.daily.pm10[2].avg)
 
-    if(graphData.forecast.daily) {
-//graphData.forecast.daily.o3.length
-        for(let i = 0; i < 5; i++) {
-        
-            datesARR.push(graphData.forecast.daily.o3[i].day)
-            o3ARR.push(graphData.forecast.daily.o3[i].avg)
-            pm10ARR.push(graphData.forecast.daily.pm10[i].avg)
-            pm25ARR.push(graphData.forecast.daily.pm25[i].avg)
-    
-        }
+    try {
+        if(graphData.forecast) {
+            //graphData.forecast.daily.o3.length
+                    for(let i = 0; i < 4; i++) {
+                    
+                        datesARR.push(graphData.forecast.daily.o3[i].day)
+                        o3ARR.push(graphData.forecast.daily.o3[i].avg)
+                        pm10ARR.push(graphData.forecast.daily.pm10[i].avg)
+                        pm25ARR.push(graphData.forecast.daily.pm25[i].avg)
+                
+                    }
+                }
+    } catch (error) {
+        return console.log(error);
     }
+
+    
 
     
         
@@ -64,7 +70,7 @@ const DisplayGraph = ({graphData}) => {
     const lineData = {
         labels: datesARR,
         datasets: [{
-            label: 'O3 avg',
+            label: 'O\u2083',
             data: o3ARR,
             fill: false,
             borderColor: 'white',
@@ -106,22 +112,22 @@ const DisplayGraph = ({graphData}) => {
         }
     }
 
-    const chart = () => {
-        setGraph({
-            labels: ['m','t','w','r','f'],
-            datasets: [{
-                    label: 'o3',
-                    data: [1,2,3,4,5],
-                    backgroundColor: 'rgba(1,1,1,1)',
-                    borderWidth: 4
-                }],   
-        })
-    }
+    // const chart = () => {
+    //     setGraph({
+    //         labels: ['m','t','w','r','f'],
+    //         datasets: [{
+    //                 label: 'o3',
+    //                 data: [1,2,3,4,5],
+    //                 backgroundColor: 'rgba(1,1,1,1)',
+    //                 borderWidth: 4
+    //             }],   
+    //     })
+    // }
 
 
-    useEffect(()=> {
-        chart();
-    }, []);
+    // useEffect(()=> {
+    //     chart();
+    // }, []);
 
     // console.log(graphData.forecast.daily.o3[0].day)
     return(

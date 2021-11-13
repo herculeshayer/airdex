@@ -1,15 +1,27 @@
-body {
-    // font-size: 24px;
-    input {
-        width: 50%;
-        padding: 10px 3px 10px 3px;
+
+// font-size: 24px;
+input {
+    width: 50%;
+    padding: 10px 3px 10px 3px;
+    margin-bottom: 30px;
+}
+
+
+
+#homepage {
+    margin-top: 10rem;
+    margin-bottom: 30px;
+    h1 {
+        font-size: 50px;
     }
-    button {
-        width: 50%;
-        background-color: white;
-        // height: 7rem;
-        // padding: 10px;
-    }
-    background-color: rgb(255, 170, 0);
-    text-align: center;
+    
+
+}
+
+#flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // align-items: stretch;
+    flex-direction: column;
 }

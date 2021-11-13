@@ -46,11 +46,13 @@ const DisplayCities = ({JuanCity}) => {
             
             <div className="Individual-City">
                 
-                <h1>Good!</h1>
-                {city.name}<br/>
-                {city.geo[0]}
-                {city.geo[1]}<br/>
-                {aqi}
+                <h1>{city.name}</h1>
+               
+                <h6>
+                    Longitude: {city.geo[0] === null ? 'Null' : city.geo[0]}<br/>
+                    Latitude: {city.geo[1] === null ? 'Null' : city.geo[1]}<br/>
+                </h6>
+                <h3>Air Quality Index: {aqi}</h3>
 
                 <DisplayGraph graphData={singleCity}/>
 

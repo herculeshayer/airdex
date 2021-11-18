@@ -2,19 +2,25 @@ import React, { useEffect, useState } from 'react';
 
 import DisplayGraph from './DisplayGraph';
 
+/**
+ * 
+ * @param {Object} SingleCity 
+ * @returns Specific city information is passed to the Graph component
+ */
+
 const RenderSingleCity = ({JuanCity}) => {
     const [ singleCity, setSingleCity ] = useState([]);
     const { aqi, city } = singleCity;
     const [ loading, setLoading ] = useState(true);
 
-
+    /**
+     * GET single city data
+     */
     useEffect(()=> {
         fetch(`https://api.waqi.info/feed/@${JuanCity}/?token=${process.env.REACT_APP_AQI_TOKEN}`)
             .then(res => res.json())
             .then(aqiCityData => {
                 setSingleCity(aqiCityData.data)
-                
-
                 setLoading(false)
             })
             .catch(e=>console.log(e))

@@ -5,8 +5,17 @@ import { Route, Routes } from "react-router-dom";
 
 import Page404 from "../pages/404";
 
+/**
+ * 
+ * @param {Object} City -- an object of a single city
+ * 
+ * @returns This componenet will return a graph created using Chart.js
+ * 
+ */
+
 const DisplayGraph = ({graphData}) => {
     
+    console.log(graphData)
  
 
     let datesARR = [], 
@@ -18,6 +27,10 @@ const DisplayGraph = ({graphData}) => {
     try {
         if(graphData.forecast) {
             
+            /**
+             * Push all values of o3, pm10, and pm25 into an array
+             * The array is given to the graph as a dataset below
+             */
                     for(let i = 0; i < 4; i++) {
                     
                         datesARR.push(graphData.forecast.daily.o3[i].day)
@@ -28,7 +41,9 @@ const DisplayGraph = ({graphData}) => {
                     }
                 }
     } catch (error) {
-        
+        /**
+         * If there is an error in adding data, route user to 404 page
+         */
         console.log(error)
         return (
             <>
@@ -96,18 +111,6 @@ const DisplayGraph = ({graphData}) => {
                     }
                 }
             }
-        },
-        scales: {
-            yAxes: [
-                {
-                    ticks: {
-                        beginAtZero: true
-                    },
-                    gridLines: {
-                        display: false,
-                    }
-                }
-            ]
         }
     }
 

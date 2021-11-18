@@ -15,16 +15,10 @@ const SearchBar = () => {
      */
     function handleRefresh(e){
         e.preventDefault();
-        
         setKeyword('');
-        console.log(keyword, 'pressed');
     }
     
-    /**
-     * Instead of it updating as I type, I could set a button that submits when clicked.
-     * I like the way it is right now, but then I have the hassle of removing keywords
-     * once passed..
-     */
+    
     return(
         <>  
             <div className="Search-Bar">

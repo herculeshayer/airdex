@@ -5,7 +5,7 @@ import RenderSingleCity from './renderSingleCity';
 
 /**
  * 
- * @param {String} param0 
+ * @param {String} cityName - the name of the city, the user is trying to search for 
  * @returns if there is a UID - it will return a single city
  * if no UID - it returns a list of all cities that match the keyword
  */
@@ -18,7 +18,9 @@ const RenderAllCities = ({keyword}) => {
 
     let URL = `https://api.waqi.info/search/?keyword=${keyword}&token=${process.env.REACT_APP_AQI_TOKEN}`;
 
-    
+    /**
+     * GET all city data
+     */
     useEffect(()=> {
         fetch(URL)
             .then(res => res.json())
@@ -59,6 +61,15 @@ const RenderAllCities = ({keyword}) => {
         } 
     }
 
+    /**
+     * 
+     * If there is a UID present, 
+     * RenderSingleCity component is passed the value of the UID
+     * 
+     * If there isn't a UID value, all cities will be listed.
+     * Upon selection of a city, a UID is passed and RenderSingleCity is executed
+     * 
+     */
     return (
         <div className="All-Cities-Container">
 

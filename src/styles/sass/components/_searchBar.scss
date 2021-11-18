@@ -8,9 +8,9 @@
         height: 40px;
         background-color: white;
         border-radius: 3px;
-        // border-style: solid;
+        
         border: 1px solid black;
-        // padding: 10px 3px 10px 3px;
+        
         margin-left: 10px;
         font-size: 16px;
         cursor: pointer;
@@ -20,12 +20,14 @@
     }
     input {
         width: 32rem;
-        // height: 40px;
+       
         padding: 10px 3px 10px 3px;
         margin-bottom: 2rem;
         border: 1px solid black;
+        transition: all 0.5s ease-in-out 0s;
     }
     input:focus {
+        transform: scale(1.02);
         outline: none;
     }
 

@@ -3,7 +3,12 @@ import React, { useState, useEffect } from 'react';
 import RenderSingleCity from './renderSingleCity';
 
 
-
+/**
+ * 
+ * @param {String} param0 
+ * @returns if there is a UID - it will return a single city
+ * if no UID - it returns a list of all cities that match the keyword
+ */
 const RenderAllCities = ({keyword}) => {
     const [ allCities, setallCities ] = useState([]);
 
@@ -75,7 +80,7 @@ const RenderAllCities = ({keyword}) => {
                             setUID(uid);
                         }}>
                             <div className="Name-Geo-Item">
-                                <h4>{station.name}</h4>
+                                <h4>{station.name.substring(0, 55)}</h4>
                                 <h6>Longitude: {station.geo[0]}<br />
                                 Latitude: {station.geo[1]}</h6>
                             </div>

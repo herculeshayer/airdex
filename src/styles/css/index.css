@@ -22,6 +22,9 @@ body {
   background-color: #ffaa00;
 }
 
+/*
+    All partials are imported here
+*/
 #homepage {
   margin-left: 100px;
   margin-right: 100px;

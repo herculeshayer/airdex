@@ -8,10 +8,17 @@ h4, h6, div {
 }
 
 html, body {
+  height: 100%;
   font-family: "YujiSyuku-Regular", Fallback, sans-serif;
   margin: auto 0;
   padding: 0;
   text-align: center;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
   background-color: #ffaa00;
 }
 
@@ -49,12 +56,18 @@ html, body {
 }
 
 .Graph {
-  background-color: whitesmoke;
+  background-color: white;
   border-radius: 3px;
+  margin-bottom: 2rem;
 }
 
 .Individual-City {
+  background-color: white;
   border-radius: 3%;
+}
+
+.Individual-City h1 {
+  margin: 0rem 3rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -94,9 +107,13 @@ html, body {
   padding: 10px 3px 10px 3px;
   margin-bottom: 2rem;
   border: 1px solid black;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
 }
 
 .Search-Bar input:focus {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
   outline: none;
 }
 
@@ -112,13 +129,44 @@ html, body {
   }
 }
 
+@-webkit-keyframes transitionIn {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(-10deg);
+            transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(-10deg);
+            transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+}
+
+.All-Cities-Container {
+  -webkit-animation: transitionIn 2s;
+          animation: transitionIn 2s;
+}
+
 .All-Cities-Container li {
   list-style-type: none;
 }
 
 .All-Cities-Container li button {
   border-radius: 5px;
-  width: 20rem;
+  width: 40rem;
   height: 8rem;
   background-color: white;
   cursor: pointer;
@@ -135,14 +183,21 @@ html, body {
 }
 
 .All-Cities-Container .Individual-City-Container .Name-Geo-Item {
-  font-size: 16px;
+  margin: 0rem 0.5rem;
+  font-size: 18px;
+}
+
+.All-Cities-Container .Individual-City-Container .Name-Geo-Item h4 {
+  margin-top: 0.2rem;
 }
 
 .All-Cities-Container .Individual-City-Container .Name-Geo-Item h6 {
-  margin-top: 2.5rem;
+  font-size: 12px;
+  margin-top: 1.2rem;
 }
 
 .All-Cities-Container .Individual-City-Container .AQI-Item {
+  font-size: 1rem;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   height: 8rem;
@@ -176,27 +231,42 @@ html, body {
   background-color: black;
 }
 
+.All-Cities-Container .Individual-City-Container {
+  -webkit-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+}
+
+.All-Cities-Container .Individual-City-Container:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
 @media only screen and (max-width: 600px) {
+  .All-Cities-Container {
+    font-size: 300px;
+  }
   .All-Cities-Container li {
     list-style-type: none;
   }
   .All-Cities-Container li button {
-    border-radius: 20px;
-    width: 20rem;
+    border-radius: 10px;
+    width: 23rem;
     height: 6rem;
     background-color: white;
     padding: 0;
     margin-bottom: 4px;
   }
-  .All-Cities-Container .Individual-City-Container .Name-Geo-Item {
-    font-size: 14px;
+  .All-Cities-Container .Individual-City-Container .Name-Geo-Item h4 {
+    font-size: 12px;
   }
   .All-Cities-Container .Individual-City-Container .Name-Geo-Item h6 {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
+    font-size: 10px;
   }
   .All-Cities-Container .Individual-City-Container .AQI-Item {
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    font-size: 12px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     height: 6rem;
     justify-items: center;
   }

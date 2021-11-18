@@ -9,11 +9,20 @@ h4, h6, div {
 }
 
 html, body {
+    height: 100%;
     font-family: "YujiSyuku-Regular", Fallback, sans-serif;
     margin: auto 0;
     padding: 0;
     text-align: center;
+    
+}
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
     background-color: rgb(255, 170, 0);
+    // background: rgb(255,170,0);
+    // background: linear-gradient(180deg, rgba(255,170,0,1) 35%, rgba(255,225,164,1) 100%);
 }
 
 

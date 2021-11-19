@@ -5,7 +5,6 @@
 
 
 Hosted on [AWS](https://main.dpsrlf9zur0gc.amplifyapp.com/).
-
 Hosted on [Netlify](https://airdex.netlify.app/).
 
 
@@ -21,13 +20,12 @@ For more information on React visit the [React Website](https://reactjs.org/).
 ### Technology Used
 Frontend: HTML, CSS, SASS, JavaScript, React.js, Chart.js
 
-Misc: AWS, Netlify, GitHub
+Misc: AWS, Netlify, GitHub, GitHub Actions
 
 ## Demo
 
 
-https://user-images.githubusercontent.com/64183136/141608783-37dc664f-e344-4d04-8137-a38d909836be.mp4
-
+https://user-images.githubusercontent.com/64183136/142565326-62566b9a-825b-4336-85f3-d6e1eec4c400.mp4
 
 
 
@@ -42,14 +40,14 @@ https://user-images.githubusercontent.com/64183136/141608783-37dc664f-e344-4d04-
 8. You're done! 
 
 ## TODO - Issues
-1. ~~On occasion the city will not have the information needed for display. Specifically, this causes the 
-application to crash due to undefined data.
+1. <s>On occasion the city will not have the information needed for display. Specifically, this causes the 
+application to crash due to undefined data.</s>
 2. The Chart.js bar graph is not entirely responsive. Further inspection needed
 3. Add react-router to navigate to a 404 page, r-r updated to v6
 
 ## TODO - Addons
 1. Test API using Jest. Integration testing for reliable API calls
-2. ~~CI/CD GitHub Actions testing
-3. ~~Animations for RenderAllCities.js. Cascading dropdown.
+2. <s>CI/CD GitHub Actions testing</s>
+3. <s>Animations for RenderAllCities.js. Cascading dropdown.</s>
 
 

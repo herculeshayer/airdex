@@ -1,50 +1,42 @@
-import React, { useEffect, useState } from 'react';
-import RenderAllCities from './renderAllCities';
+import React, { useEffect, useState } from "react";
+import RenderAllCities from "./renderAllCities";
 
-import { GrRefresh } from 'react-icons/gr';
+import { GrRefresh } from "react-icons/gr";
 
 const SearchBar = () => {
-    const [ keyword, setKeyword ] = useState('');
-
+    const [keyword, setKeyword] = useState("");
 
     /**
-     * 
+     *
      * @param {error} e
-     * 
-     * Reset keyword on press 
+     *
+     * Reset keyword on press
      */
-    function handleRefresh(e){
+    function handleRefresh(e) {
         e.preventDefault();
-        setKeyword('');
+        setKeyword("");
     }
-    
-    
-    return(
-        <>  
+
+    return (
+        <>
             <div className="Search-Bar">
                 <form onSubmit={handleRefresh}>
-
-                    <input 
-                        name="city" 
-                        type="text" 
-                        placeholder="Enter City i.e. Vancouver, Montreal, etc" 
+                    <input
+                        name="city"
+                        type="text"
+                        placeholder="Enter City i.e. Vancouver, Montreal, etc"
                         value={keyword}
-                        onChange={e=>setKeyword(e.target.value)}
+                        onChange={(e) => setKeyword(e.target.value)}
                     />
-                    <button type="submit"><GrRefresh /></button>
-
+                    <button type="submit">
+                        <GrRefresh />
+                    </button>
                 </form>
-
-                
             </div>
 
-            {
-                keyword ?
-                <RenderAllCities keyword={keyword} /> :
-                <h2>Go ahead, don't be shy</h2>
-            }
+            <RenderAllCities keyword={keyword} />
         </>
     );
-}
+};
 
 export default SearchBar;

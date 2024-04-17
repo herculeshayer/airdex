@@ -2,7 +2,6 @@
   font-family: "YujiSyuku-Regular";
   src: url("../../assets/fonts/YujiSyuku-Regular.ttf") format("truetype");
 }
-
 h4, h6, div {
   margin: 0;
 }
@@ -19,7 +18,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: 0;
-  background-color: #ffaa00;
+  background-color: rgb(255, 170, 0);
 }
 
 /*
@@ -32,22 +31,15 @@ body {
   margin-bottom: 30px;
   font-size: 18px;
 }
-
 #homepage h1 {
+  margin: 0;
   font-size: 50px;
 }
 
 #flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  flex-direction: column;
 }
 
 @media only screen and (max-width: 600px) {
@@ -57,7 +49,6 @@ body {
     margin-right: 0px;
   }
 }
-
 .Graph {
   background-color: white;
   border-radius: 3px;
@@ -68,7 +59,6 @@ body {
   background-color: white;
   border-radius: 3%;
 }
-
 .Individual-City h1 {
   margin: 0rem 3rem;
 }
@@ -79,17 +69,14 @@ body {
     width: 100%;
   }
 }
-
 @media only screen and (max-width: 800px) {
   .Individual-City {
     font-size: 12px;
   }
 }
-
 .Search-Bar {
   width: 100%;
 }
-
 .Search-Bar button {
   width: 60px;
   height: 40px;
@@ -100,23 +87,18 @@ body {
   font-size: 16px;
   cursor: pointer;
 }
-
 .Search-Bar button:hover {
   background-color: #00ffaa;
 }
-
 .Search-Bar input {
   width: 32rem;
   padding: 10px 3px 10px 3px;
   margin-bottom: 2rem;
   border: 1px solid black;
-  -webkit-transition: all 0.5s ease-in-out 0s;
   transition: all 0.5s ease-in-out 0s;
 }
-
 .Search-Bar input:focus {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  transform: scale(1.02);
   outline: none;
 }
 
@@ -125,48 +107,27 @@ body {
     width: 20rem;
   }
 }
-
 @media only screen and (max-width: 400px) {
   .Search-Bar input {
     width: 15rem;
   }
 }
-
-@-webkit-keyframes transitionIn {
-  from {
-    opacity: 0;
-    -webkit-transform: rotateX(-10deg);
-            transform: rotateX(-10deg);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: rotateX(0);
-            transform: rotateX(0);
-  }
-}
-
 @keyframes transitionIn {
   from {
     opacity: 0;
-    -webkit-transform: rotateX(-10deg);
-            transform: rotateX(-10deg);
+    transform: rotateX(-10deg);
   }
   to {
     opacity: 1;
-    -webkit-transform: rotateX(0);
-            transform: rotateX(0);
+    transform: rotateX(0);
   }
 }
-
 .All-Cities-Container {
-  -webkit-animation: transitionIn 2s;
-          animation: transitionIn 2s;
+  animation: transitionIn 2s;
 }
-
 .All-Cities-Container li {
   list-style-type: none;
 }
-
 .All-Cities-Container li button {
   border-radius: 5px;
   width: 40rem;
@@ -177,71 +138,53 @@ body {
   padding: 0;
   margin-bottom: 4px;
 }
-
 .All-Cities-Container .Individual-City-Container {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 3fr 1fr;
-      grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1fr;
 }
-
 .All-Cities-Container .Individual-City-Container .Name-Geo-Item {
   margin: 0rem 0.5rem;
   font-size: 18px;
 }
-
 .All-Cities-Container .Individual-City-Container .Name-Geo-Item h4 {
   margin-top: 0.2rem;
 }
-
 .All-Cities-Container .Individual-City-Container .Name-Geo-Item h6 {
   font-size: 12px;
   margin-top: 1.2rem;
 }
-
 .All-Cities-Container .Individual-City-Container .AQI-Item {
   font-size: 1rem;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   height: 8rem;
 }
-
 .All-Cities-Container .Individual-City-Container .good {
   background-color: #096;
 }
-
 .All-Cities-Container .Individual-City-Container .moderate {
   background-color: #ffde33;
 }
-
 .All-Cities-Container .Individual-City-Container .unhealthy-sensitive {
   background-color: #ff9933;
 }
-
 .All-Cities-Container .Individual-City-Container .unhealthy {
   background-color: #c03;
 }
-
 .All-Cities-Container .Individual-City-Container .very-unhealthy {
   background-color: #609;
 }
-
 .All-Cities-Container .Individual-City-Container .hazardous {
   background-color: #7e0023;
 }
-
 .All-Cities-Container .Individual-City-Container .AQI-Unavail {
   background-color: black;
 }
-
 .All-Cities-Container .Individual-City-Container {
-  -webkit-transition: all 0.2s linear 0s;
   transition: all 0.2s linear 0s;
 }
-
 .All-Cities-Container .Individual-City-Container:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 @media only screen and (max-width: 600px) {
@@ -274,4 +217,5 @@ body {
     justify-items: center;
   }
 }
+
 /*# sourceMappingURL=index.css.map */
